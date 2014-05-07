@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>My first ever blog post | Lee Ellam, Front End Developer.</title><link rel="shortcut icon" href="/assets/img/favicon.ico"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic|Merriweather:400,400italic,700,700italic" rel="stylesheet" type="text/css"><link rel="stylesheet" href="/assets/css/main.css"></head><body><header role="banner" id="site-header"><nav id="main-navigation"><ul><li><a href="/resume/" title="resume">resume</a></li><li><a href="/projects/" title="projects">projects</a></li><li class="selected"><a href="/blog/" title="blog">blog</a></li><li><a href="/about/" title="about">about</a></li></ul></nav><div id="logo"><a href="/" title="Home">Home</a></div><a href="#main-navigation" title="Toggle menu" class="menu-button"><span>Toggle menu</span></a></header><div id="content" role="main"><article class="post">   <header><h1><a href="undefined" title="My first ever blog post">My first ever blog post</a></h1><div class="metadata">Published on 27   February   2014</div></header><p>I&#39;ve been working on, for and with the internet for around 7 years now, and I&#39;m ashamed to say that this is my first ever blog and my first ever post. I guess I&#39;ve always assumed that noone would care what I had to say, which I still do but whatever. New year, new site, new blog.
+<!-- more --></p>
+<p>I decided to go with Harp to power my new site, and with a travel blog in the making, I figured I might as well evaluate blogging with it on my personal site.</p>
+<h2>What I like about Harp</h2>
+<p>I like the way that Harp mostly just works, that I can work with .less files without having to write <em>another</em> grunt file, and that it&#39;s mostly intuitive. Hopefully this will keep me (and my short attention span) happy enough to continue updating it.</p>
+<p>Oh, and a static site is cheap to host (as a Yorkshireman, I should have put this as the main point...).</p>
+<h2>What I don&#39;t like</h2>
+<p>I don&#39;t like having to write a .json file for metadata, I don&#39;t like that I can&#39;t easily create categories, and I don&#39;t like that I can&#39;t paginate my blog and have to have a huge list of posts (when I have a huge amount anyway) rather than next and previous links.</p>
+<p>These are small pain points, but I would have preferred to be able to use YAML front-matter for my metadata in the same way you can with Jekyll. I know there are performance issues with doing so, but I&#39;d still prefer it. And let&#39;s face it, the whole point is to compile into a static site anyway, I wouldn&#39;t be running <code>harp server</code> in production.</p>
+<p>The pagination and categorisation issues are probably solvable in some way, I&#39;ll have to dig into the source to take a look, or maybe I&#39;ll just fork harp and put in some plugin architecture for my own use.</p>
+<p>For now, it&#39;s easier than having to write my own static site generator, and for my requirements a whole lot better than writing a database powered blog. Maybe for the travel site I&#39;ll use something else, but let&#39;s see how this plays out first.</p>
+<p>Anyway, I hope you like the site, I feel it&#39;s very boring, but having redesigned my personal site about 50 million times in the last few years, at least it&#39;s in the wild!</p>
+<p>Until the next time...</p>
+</article></div><footer id="site-footer" role="contentinfo"><p>&copy; 2014 Lee Ellam</p></footer><script>var html = document.querySelector('html');
+var menu = document.querySelector('.menu-button');
+html.classList.add('ontouchstart' in window ? 'touch' : 'no-touch');
+menu.addEventListener('click', function(e) {
+  e.preventDefault();
+  html.classList.toggle('menu-visible');
+});</script></body></html>
