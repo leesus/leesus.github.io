@@ -1,0 +1,17 @@
+- var pages = []
+for post, slug in public
+  if slug !== '_contents' && slug !== 'assets'
+    - pages.push(slug)
+- pages.reverse()
+
+nav#main-navigation
+  ul
+    - each slug in pages
+      if current.path[0] === slug
+        li.selected
+          a(href='/#{slug}/', title='#{slug}')= slug
+      else
+        li
+          a(href='/#{slug}/', title='#{slug}')= slug
+          //-
+            slug.replace(slug.charAt(0), slug.charAt(0).toUpperCase())

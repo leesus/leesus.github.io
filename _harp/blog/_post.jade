@@ -1,0 +1,13 @@
+- var d = new Date(date);
+- var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+- var month = d.getMonth();
+- date = [d.getDate(), ' ', months[month], ' ', d.getFullYear()].join(' ');
+- console.log(date);
+
+article.post    
+  header
+    h1
+      a(href='#{slug}', title='#{title}')= title
+    .metadata Published on #{date}
+  
+  != yield

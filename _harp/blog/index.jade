@@ -1,0 +1,21 @@
+- var excerpt = function excerpt(content) {
+  - return content.split('<!-- more -->')[0];
+- };
+
+- var humanDate = function humanDate(date) {
+  - var d = new Date(date);
+  - var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  - var month = d.getMonth();
+  - return date = [d.getDate(), ' ', months[month], ' ', d.getFullYear()].join(' ');
+- }
+
+section.posts
+  for post, slug in public.blog._data
+    article.post
+      header
+        h1
+          a(href='#{slug}', title='#{post.title}')= post.title
+        .metadata Published on 
+          != humanDate(post.date)
+      div.content
+        .excerpt!= excerpt(partial(slug))

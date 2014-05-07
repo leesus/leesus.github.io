@@ -1,4 +1,4 @@
-leesus.github.io
-================
+lee-ellam.com
+=============
 
-Personal website, powered by Harp.js (for now)
+New personal website, powered by Harp.js

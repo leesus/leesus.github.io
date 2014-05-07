@@ -1,0 +1,28 @@
+doctype
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    title= locals.title ? title + " | " + site_title : site_title
+    link(rel='shortcut icon', href='/assets/img/favicon.ico')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic|Merriweather:400,400italic,700,700italic', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", href="/assets/css/main.css")
+  body
+    != partial('/_shared/header')
+
+    div#content(role='main')
+      if current.path[0] === 'blog' && current.path[1] !== 'index'
+        != partial('/blog/_post')
+      else
+        != yield
+
+    != partial('/_shared/footer')
+
+    script
+      var html = document.querySelector('html');
+      var menu = document.querySelector('.menu-button');
+      html.classList.add('ontouchstart' in window ? 'touch' : 'no-touch');
+      menu.addEventListener('click', function(e) {
+        e.preventDefault();
+        html.classList.toggle('menu-visible');
+      });
